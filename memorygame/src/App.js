@@ -1,5 +1,5 @@
 import React from "react";
-import Game from "./components/ClickGame";
+import ClickGame from "ClickGame";
 
 const App = () => <ClickGame />
 
