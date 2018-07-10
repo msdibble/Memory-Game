@@ -9,3 +9,5 @@ const ClickPicture = props => (
     className= {'click-picture${props.shake ? " shake" : ""}'}
     />
 );
+
+export default ClickPicture;
