@@ -1,4 +1,4 @@
-import React, { component } from "react";
+import React, { Component } from "react";
 import NavBar from "../Navbar";
 import Header from "../Header";
 import Data from "../Data.json";
@@ -56,11 +56,40 @@ class ClickGame extends Component {
        let correctGuess = false;
        const newData = this.state.Data.map(item => {
            const newItem = { ...item };
-           if (newItem.id === id) {
-               newItem.clicked = true;
-               correctGuess = true;
+           if(newItem.id === id) {
+               if(!newItem.clicked) {
+                   newItem.clicked = true;
+                   correctGuess = true;
+               }
            }
-       }) 
+           return newItem;
+       }); 
+
+       correctGuess
+       ? this.ProcessCorrectGuess(newData)
+       : this.ProcessIncorrectGuess(newData);
+    };
+
+    render() {
+        return (
+            <div>
+                <NavBar Score={this.state.score} TopScore={this.state.TopScore}/>
+                <Header />
+                <Container>
+                    {this.state.data.map(item => (
+                        <ClickPicture 
+                        key={item.id}
+                        id={item.id}
+                        shake={!this.state.score && this.state.TopScore}
+                        processClick={this.ProcessPictureClick}
+                        image={item.image}
+                        />
+                    ))}
+                </Container>
+                <Footer/>
+            </div>
+        )
     }
-    
 }
+
+export default ClickGame;
