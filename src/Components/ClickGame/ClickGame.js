@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NavBar from "../Navbar";
 import Header from "../Header";
 import Data from "../Data.json";
-import Footer from "../Footer";
 import Container from "../ClickPicture";
 import ClickPicture from "../ClickPicture";
 

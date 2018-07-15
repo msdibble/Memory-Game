@@ -1,0 +1,49 @@
+.navbar .Right {
+    animation: 1s Right;
+}
+
+.navbar .Wrong {
+    animation: 1s Wrong;
+}
+
+@keyframes Right {
+    0% {
+        color: white;
+    }
+    20% {
+        color: blue;
+    }
+    40% {
+        color: white;
+    }
+    60% {
+        color: blue;
+    }
+    80% {
+        color: white;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+@keyframes Wrong {
+    0% {
+        color: white;
+    }
+    20% {
+        color: blue;
+    }
+    40% {
+        color: white;
+    }
+    60% {
+        color: blue;
+    }
+    80% {
+        color: white;
+    }
+    100% {
+        color: blue;
+    }
+}

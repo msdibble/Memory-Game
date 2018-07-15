@@ -2,12 +2,3 @@
     display: flex;
     flex-direction: column;
 }
-
-.click-pictures:hover {
-    transform: scale(1.05);
-    transform: 0.1s;
-}
-
-.shake {
-    animation: shake 0.5s;
-}

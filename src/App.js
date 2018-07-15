@@ -1,6 +1,10 @@
 import React from "react";
-import ClickGame from "ClickGame";
+import ClickGame from "./Components/ClickGame";
 
-const App = () => <ClickGame />
+const App = () => (
+    <div className="container-fluid">
+        <ClickGame />
+    </div>
+);
 
 export default App;
